@@ -1,0 +1,1 @@
+/home/koklobok/.p10k.zsh
