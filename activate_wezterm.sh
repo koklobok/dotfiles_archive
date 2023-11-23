@@ -21,9 +21,10 @@ if [ -n "$TARGET_PID" ]; then
             # xdotool windowactivate "$window_id" active_window_id_hex=$(printf '0x%x\n' "$(xdotool getactivewindow)")
             echo "$active_window_id" > /tmp/dotfiles_last_active_window.txt
 
-            wmctrl -i -a $window_id
+            xdotool windowactivate --sync $window_id
         else
             echo "wezterm already active"
+            xdotool windowminimize "$window_id"
             xdotool windowactivate "$last_active_window"
         fi
     else
