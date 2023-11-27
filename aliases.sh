@@ -6,3 +6,5 @@ alias dexec='podman exec -it'
 alias pprune='podman image prune -f && podman container prune -f'
 
 alias ii='sudo dnf install -y'
+
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
